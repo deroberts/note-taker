@@ -1,9 +1,9 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const randyRandomId = require('./helpers/randyid');
+const idRandom = require('./helpers/randomId');
 
-const PORT = process.env.PORT || 8888;
+const PORT = process.env.PORT || 9000;
 
 const app = express();
 
@@ -58,7 +58,7 @@ app.post('/api/notes', (req, res) => {
     const newNote = {
       title,
       text,
-      id: randyId(),
+      id: randomId(),
     };
 
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
