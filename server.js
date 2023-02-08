@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const idRandom = require('./helpers/randomId');
+const randy = require('./helpers/randomId');
 
 const PORT = process.env.PORT || 9000;
 
